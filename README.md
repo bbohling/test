@@ -1,3 +1,3 @@
 # test
 
-just a ci/cd test
+just a ci/cd test.
