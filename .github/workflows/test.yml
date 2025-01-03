@@ -21,13 +21,13 @@ jobs:
       - name: Write inputs to AUDIT.md
         run: |
           TODAY=$(date +'%Y-%m-%d')
-          echo "## Audit Log - $TODAY" > AUDIT.md
+          echo "## Audit Log - $TODAY" >> AUDIT.md
           echo "" >> AUDIT.md
           echo "WHATEVER: ${{ github.event.inputs.SOMENUM }}" >> AUDIT.md
           echo "" >> AUDIT.md
           echo "ANOTHER: ${{ github.event.inputs.ANOTHERNUM }}" >> AUDIT.md
           echo "" >> AUDIT.md
-          echo "Workflow Run URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\n\n" >> AUDIT.md
+          echo "Workflow Run URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> AUDIT.md
           echo "" >> AUDIT.md
           echo "" >> AUDIT.md
       - name: Commit and push changes
